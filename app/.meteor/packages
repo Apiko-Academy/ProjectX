@@ -7,3 +7,8 @@
 meteor-platform
 autopublish
 insecure
+coffeescript
+less
+iron:router
+aldeed:simple-schema
+aldeed:collection2
