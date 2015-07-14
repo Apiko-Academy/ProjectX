@@ -1,3 +1,3 @@
 @Companies = new Mongo.Collection 'companies'
 
-@Companies.attachSchema schemas.Company
+Companies.attachSchema schemas.Company
