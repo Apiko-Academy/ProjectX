@@ -9,6 +9,11 @@ schema = new SimpleSchema
     label: 'Holidays'
     minCount: 0
     maxCount: 365
+  projects:
+    type: [schemas.Project]
+    label: 'Projects'
+    min: 0
+    max: 2 ** 32
 
 
 Namespace 'schemas', Company:schema
