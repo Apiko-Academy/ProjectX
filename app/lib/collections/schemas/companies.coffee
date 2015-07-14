@@ -14,6 +14,11 @@ schema = new SimpleSchema
     label: 'Projects'
     min: 0
     max: 2 ** 32
+  customers:
+    type: [schemas.Customer]
+    label: 'Customers'
+    min: 0
+    max: 2 ** 16
 
 
 Namespace 'schemas', Company:schema
