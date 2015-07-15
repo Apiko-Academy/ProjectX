@@ -15,3 +15,8 @@ coffeescript
 underscore
 zephraph:namespace
 accounts-password
+yogiben:admin
+alanning:roles
+twbs:bootstrap
+fortawesome:fontawesome
+dburles:collection-helpers
