@@ -4,6 +4,9 @@ schema = new SimpleSchema
     label: 'Username'
     min: 3
     max: 32
+  services:
+    type: Object
+    blackbox: true
   emails:
     type: [Object]
     label: 'Emails'
