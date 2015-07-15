@@ -1,18 +1,18 @@
 schema = new SimpleSchema
   name:
     type:String
-    label:'Name'
+    label: 'Name'
     min: 2
     max: 32
   position:
     type: String
-    label: 'position'
+    label: 'Position'
     optional: true
     min: 2
     max: 140
   workingHours:
     type: Number
-    label: 'Working Hours'
+    label: 'Working hours'
     min: 1
     max: 24
   holiday:

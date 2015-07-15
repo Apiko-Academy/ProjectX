@@ -1,3 +1,3 @@
 @Activity = new Mongo.Collection 'activity'
 
-@Activity.attachSchema schemas.Activity
+Activity.attachSchema schemas.Activity
