@@ -19,3 +19,5 @@ twbs:bootstrap
 fortawesome:fontawesome
 dburles:collection-helpers
 accounts-base
+cfs:standard-packages
+cfs:s3
