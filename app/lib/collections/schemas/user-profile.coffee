@@ -7,5 +7,6 @@ schema = new SimpleSchema
   photo:
     type: Mongo.ObjectID
     label: 'Photo'
+    optional: true
 
 Namespace 'schemas', UserProfile:schema
