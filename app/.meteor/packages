@@ -21,3 +21,4 @@ dburles:collection-helpers
 accounts-base
 cfs:standard-packages
 cfs:s3
+infinitedg:winston
