@@ -24,3 +24,5 @@ cfs:s3
 infinitedg:winston
 brentjanderson:winston-client
 infinitedg:winston-loggly
+juliancwirko:s-alert
+juliancwirko:s-alert-genie
