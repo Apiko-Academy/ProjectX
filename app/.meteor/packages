@@ -15,7 +15,6 @@ zephraph:namespace
 accounts-password
 yogiben:admin
 alanning:roles
-twbs:bootstrap
 fortawesome:fontawesome
 dburles:collection-helpers
 accounts-base
@@ -26,3 +25,4 @@ brentjanderson:winston-client
 infinitedg:winston-loggly
 juliancwirko:s-alert
 juliancwirko:s-alert-genie
+nemo64:bootstrap
