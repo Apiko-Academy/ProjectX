@@ -1,5 +1,4 @@
 Meteor.startup ->
-  console.log 'users.coffee'
   usersNum = Meteor.users.find().count()
   unless usersNum
     userId = Accounts.createUser
