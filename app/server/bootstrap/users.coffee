@@ -1,4 +1,5 @@
 Meteor.startup ->
+  console.log 'users.coffee'
   usersNum = Meteor.users.find().count()
   unless usersNum
     userId = Accounts.createUser
@@ -7,5 +8,5 @@ Meteor.startup ->
       email: 'admin@projectx.com'
       profile:
         fullname: 'Maxim Grischuk'
-    console.log 'Added new admin user:', userId
+    Winston.info "Added new admin user: #{userId}"
     Roles.addUsersToRoles userId, 'admin'
