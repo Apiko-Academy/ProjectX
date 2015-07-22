@@ -12,9 +12,15 @@
   </ul>
   <ul class="nav navbar-nav navbar-right">
     <li>
-      {{# linkTo route='atSignIn'}}
-        Sign in
-      {{/ linkTo}}
+      {{# if currentUser}}
+        {{# linkTo }}
+          {{currentUser.profile.fullname}}
+        {{/ linkTo }}
+      {{else}}
+        {{# linkTo route='atSignIn'}}
+          Sign in
+        {{/ linkTo}}
+      {{/ if}}
     </li>
   </ul>
 </template>
