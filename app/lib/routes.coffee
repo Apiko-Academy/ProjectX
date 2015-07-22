@@ -3,6 +3,11 @@ Router.configure
   loadingTemplate: 'Loading'
   notFoundTemplate: 'NotFound'
 
+AccountsTemplates.configureRoute 'signIn',
+  layoutTemplate: 'Layout'
+AccountsTemplates.configureRoute 'signUp',
+  layoutTemplate: 'Layout'
+
 Router._scrollToHash = (hash) ->
   hash = 'body' unless hash.length
   $section = $ hash
