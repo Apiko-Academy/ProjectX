@@ -1,15 +1,30 @@
-.price-block {
-  display: table;
-  .price-item {
-    border-radius: 100%;
-    border: 1px solid RGBA(0, 0, 0, 0.35);
-    width: 8em;
-    height: 8em;
+.home {
+   > .row {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  > .row:nth-child(even) {
+    background-color: #eee;
+  }
+
+  > #home-contact hr {
+    border-color: RGBA(255, 255, 255, 0.85);
+  }
+
+  .price-block {
     display: table;
-    span {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
+    .price-item {
+      border-radius: 100%;
+      border: 1px solid RGBA(0, 0, 0, 0.35);
+      width: 8em;
+      height: 8em;
+      display: table;
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
     }
   }
 }

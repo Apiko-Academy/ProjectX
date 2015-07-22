@@ -1,9 +1,12 @@
 <template name="Home">
-  {{> HomeHead}}
-  {{> HomeAbout}}
-  {{> HomePrices}}
-  {{> HomeContact}}
+  <div class="home">
+    {{> HomeHead}}
+    {{> HomeAbout}}
+    {{> HomePrices}}
+    {{> HomeContact}}
+  </div>
 </template>
+
 
 <template name="HomeHead">
   <div class="row">
@@ -35,9 +38,10 @@
   </div>
 </template>
 
+
 <template name="HomeAbout">
-  <div class="row">
-    <div class="col-md-12 col-lg-12 well text-center">
+  <div class="row" id="home-about">
+    <div class="col-md-12 col-lg-12 text-center">
       <h2 class="text-uppercase">About</h2>
       <div class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 text-muted">
         <p>
@@ -52,7 +56,7 @@
 
 
 <template name="HomePrices">
-  <div class="row">
+  <div class="row" id="home-prices">
     <div class="col-md-12 col-lg-12 text-center">
       <h2 class="text-uppercase">Prices</h2>
       <div class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 text-muted">
@@ -108,8 +112,8 @@
 </template>
 
 <template name="HomeContact">
-  <div class="row">
-    <div class="col-md-12 col-lg-12 well text-center">
+  <div class="row" id="home-contact">
+    <div class="col-md-12 col-lg-12 text-center">
       <h2 class="text-uppercase">Contact us</h2>
       <div class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 text-muted">
         <p>
@@ -136,6 +140,7 @@
                class="img-responsive" alt="city">
         </div>
       </div>
+      <hr>
       <div class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 text-muted lead text-uppercase">
         <p>
           Our social pages
