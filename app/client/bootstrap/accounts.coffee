@@ -13,6 +13,8 @@ AccountsTemplates.addField
   minLength: 3
   maxLength: 32
   trim: true
+  re: /^[\w]{3,32}$/
+  errStr: 'Only symbols and digits allowed.'
   # TODO: Uncomment after implement of server-side checker
   # func: (value) ->
   #   if Meteor.isClient
@@ -32,3 +34,7 @@ AccountsTemplates.addField
   type: 'text'
   displayName: 'Fullname'
   required: true
+  minLength: 2
+  maxLength: 140
+  re: /^[\w\s]{2,140}$/
+  errStr: 'Only symbols and digits allowed.'
