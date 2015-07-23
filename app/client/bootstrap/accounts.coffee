@@ -1,9 +1,9 @@
 AccountsTemplates.removeField 'password'
 AccountsTemplates.addField
-    _id: 'password'
-    type: 'password'
-    required: true
-    minLength: 6
+  _id: 'password'
+  type: 'password'
+  required: true
+  minLength: 6
 
 
 AccountsTemplates.addField
@@ -15,18 +15,6 @@ AccountsTemplates.addField
   trim: true
   re: /^[\w]{3,32}$/
   errStr: 'Only symbols and digits allowed.'
-  # TODO: Uncomment after implement of server-side checker
-  # func: (value) ->
-  #   if Meteor.isClient
-  #     self = this
-  #     Meteor.call 'userExists', value, (err, userExists) ->
-  #       if not userExists
-  #         self.setSuccess()
-  #       else
-  #         self.setError userExists
-  #       self.setValidating false
-  #   else if Meteor.isServer
-  #     Meteor.call 'userExists', value
 
 
 AccountsTemplates.addField
