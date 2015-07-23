@@ -11,16 +11,6 @@
     </li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
-    <li>
-      {{# if currentUser}}
-        {{# linkTo }}
-          {{currentUser.profile.fullname}}
-        {{/ linkTo }}
-      {{else}}
-        {{# linkTo route='atSignIn'}}
-          Sign in
-        {{/ linkTo}}
-      {{/ if}}
-    </li>
+    {{> MenuAuth}}
   </ul>
 </template>
