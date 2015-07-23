@@ -3,10 +3,12 @@ Router.configure
   loadingTemplate: 'Loading'
   notFoundTemplate: 'NotFound'
 
+
 AccountsTemplates.configureRoute 'signIn',
   layoutTemplate: 'Layout'
 AccountsTemplates.configureRoute 'signUp',
   layoutTemplate: 'Layout'
+
 
 Router._scrollToHash = (hash) ->
   hash = 'body' unless hash.length
@@ -17,9 +19,15 @@ Router._scrollToHash = (hash) ->
     ,
       'slow'
 
+
 Router.route '/',
   name: 'home'
   layoutTemplate: 'Layout'
   action: () ->
     @render 'HomeMenu', to: 'layoutMenu'
     @render 'Home'
+
+
+Router.route '/company/new',
+  name: 'createCompany'
+  layoutTemplate: 'Layout'
