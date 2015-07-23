@@ -28,6 +28,6 @@ Router.route '/',
     @render 'Home'
 
 
-Router.route '/company/new',
+Router.route '/companies/new',
   name: 'createCompany'
   layoutTemplate: 'Layout'
