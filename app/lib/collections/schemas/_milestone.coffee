@@ -14,4 +14,4 @@ schema = SimpleSchema
     type: Date
     label: 'Date'
 
-Namespace 'schemas', Milestone:schema
+Namespace 'schemas', Milestone: schema

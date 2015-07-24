@@ -27,4 +27,4 @@ schema = new SimpleSchema
     optional: true
     blackbox: true
 
-Namespace 'schemas', User:schema
+Namespace 'schemas', User: schema

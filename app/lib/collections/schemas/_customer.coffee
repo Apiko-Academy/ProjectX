@@ -5,4 +5,4 @@ schema = new SimpleSchema
     min: 2
     max: 64
 
-Namespace 'schemas', Customer:schema
+Namespace 'schemas', Customer: schema

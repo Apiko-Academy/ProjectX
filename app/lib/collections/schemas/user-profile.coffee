@@ -9,4 +9,4 @@ schema = new SimpleSchema
     label: 'Photo'
     optional: true
 
-Namespace 'schemas', UserProfile:schema
+Namespace 'schemas', UserProfile: schema

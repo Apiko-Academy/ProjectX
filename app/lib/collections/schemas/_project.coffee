@@ -7,8 +7,8 @@ schema = new SimpleSchema
   description:
     type: String
     label: 'Description'
-    optional: true
-    min: 6
+    defaultValue: ''
+    min: 0
     max: 140
   milestones:
     type: [schemas.Milestone]
@@ -16,4 +16,4 @@ schema = new SimpleSchema
     minCount: 0
     maxCount: 256
 
-Namespace 'schemas', Projects:schema
+Namespace 'schemas', Project: schema
