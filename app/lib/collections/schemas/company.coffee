@@ -5,11 +5,11 @@ schema = new SimpleSchema
     min: 1
     max: 32
   holidays:
-    type: [Object]
+    type: [Date]
     label: 'Holidays'
     defaultValue: []
     minCount: 0
-    maxCount: 365
+    maxCount: 2**16
   projects:
     type: [schemas.Project]
     label: 'Projects'

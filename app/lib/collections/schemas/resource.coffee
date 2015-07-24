@@ -16,9 +16,10 @@ schema = new SimpleSchema
     min: 1
     max: 24
   holiday:
-    type: [Date]
+    type: [schemas.Holiday]
     label: 'Holiday'
+    defaultValue: []
     minCount: 0
-    maxCount: 365
+    maxCount: 2**16
 
 Namespace 'schemas', Resource: schema
