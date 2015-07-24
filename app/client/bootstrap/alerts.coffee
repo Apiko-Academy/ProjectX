@@ -6,4 +6,4 @@ Meteor.startup ->
     html: false
     onRouteClose: true
     stack: true
-    offset: 0
+    offset: 60
