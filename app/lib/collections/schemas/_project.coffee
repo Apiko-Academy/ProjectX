@@ -7,8 +7,8 @@ schema = new SimpleSchema
   description:
     type: String
     label: 'Description'
-    defaultValue: ''
-    min: 0
+    optional: true
+    min: 6
     max: 140
   milestones:
     type: [schemas.Milestone]
