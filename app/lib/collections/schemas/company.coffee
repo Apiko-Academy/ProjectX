@@ -20,6 +20,8 @@ schema = new SimpleSchema
     type: String
     label: 'Owner'
     denyUpdate: true
+    autoform:
+      type: 'hidden'
     autoValue: () ->
       @userId if @isInsert
   customers:
