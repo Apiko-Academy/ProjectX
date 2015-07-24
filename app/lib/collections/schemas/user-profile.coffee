@@ -8,5 +8,9 @@ schema = new SimpleSchema
     type: Mongo.ObjectID
     label: 'Photo'
     optional: true
+  companies:
+    type: [String]
+    label: 'Companies'
+    defaultValue: []
 
 Namespace 'schemas', UserProfile: schema
