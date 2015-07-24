@@ -12,5 +12,7 @@ schema = new SimpleSchema
     type: [String]
     label: 'Companies'
     defaultValue: []
+  'companies.$':
+    regEx: SimpleSchema.RegEx.Id
 
 Namespace 'schemas', UserProfile: schema

@@ -18,6 +18,7 @@ schema = new SimpleSchema
     max: 2 ** 32
   owner:
     type: String
+    regEx: SimpleSchema.RegEx.Id
     label: 'Owner'
     denyUpdate: true
     autoform:
