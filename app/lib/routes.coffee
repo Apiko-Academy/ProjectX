@@ -28,6 +28,11 @@ Router.route '/',
     @render 'Home'
 
 
+Router.route '/user/profile',
+  name: 'userProfile'
+  layoutTemplate: 'Layout'
+
+
 Router.route '/access-forbidden',
   name: 'accessForbidden'
 
@@ -52,4 +57,4 @@ Router.onBeforeAction () ->
   else
     Router.goToAccessForbidden()
 ,
-  only: ['createCompany']
+  only: ['createCompany', 'userProfile']

@@ -1,0 +1,32 @@
+<template name="UserProfile">
+  <div class="user-profile">
+    <h2 class="text-center">
+      Profile page
+    </h2>
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <h1>{{userInitials}}</h1>
+        {{> avatar user=currentUser
+                   size="large"
+                   class="pull-right"
+                   shape="rounded"
+                   initials=userInitials}}
+      </div>
+      <div class="col-md-9 col-lg-9">
+        <p class="lead">{{currentUser.profile.fullName}}</p>
+        <p>
+          <b>Email:</b>
+          &nbsp;
+          <a href="mailto:{{userEmail}}">
+            {{userEmail}}
+          </a>
+        </p>
+        <p>
+          <b>Role:</b>
+          &nbsp;
+          {{userRole}}
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
