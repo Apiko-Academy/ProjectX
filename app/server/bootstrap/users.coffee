@@ -7,5 +7,5 @@ Meteor.startup ->
       email: 'admin@projectx.com'
       profile:
         fullname: 'Maxim Grischuk'
-    Winston.info "Added new admin user: #{userId}"
     Roles.addUsersToRoles userId, 'admin'
+    Winston.info "Added new admin user: #{userId}"

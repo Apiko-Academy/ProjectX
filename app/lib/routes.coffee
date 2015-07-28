@@ -32,6 +32,12 @@ Router.route '/access-forbidden',
   name: 'accessForbidden'
 
 
+Router.goToAccessForbidden = () ->
+  url = Iron.Location.get().path
+  Winston.warn "Request to forbidden URL \"#{url}\""
+  Router.go 'accessForbidden'
+
+
 Router.route '/companies/create',
   name: 'createCompany'
   layoutTemplate: 'Layout'
@@ -39,10 +45,11 @@ Router.route '/companies/create',
     @render 'CreateCompanyMenu', to: 'layoutMenu'
     @render 'CreateCompany'
 
+
 Router.onBeforeAction () ->
   if Meteor.userId()
     @next()
   else
-    Router.go 'accessForbidden'
+    Router.goToAccessForbidden()
 ,
   only: ['createCompany']
