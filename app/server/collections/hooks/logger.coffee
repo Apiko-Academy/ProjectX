@@ -28,12 +28,12 @@ generateMessage = (collectionInfo) ->
     collectionInfo.collection.after[operation.hookName] (userId, doc) ->
       if userId
         message = [
-          "#{collectionInfo.itemName} '#{doc._id}'",
+          "#{collectionInfo.itemName} '#{doc._id}'"
           "#{operation.opName} by '#{userId}'."
         ].join ' '
       else
         message = [
-          "#{collectionInfo.itemName} '#{doc._id}'",
+          "#{collectionInfo.itemName} '#{doc._id}'"
           "has been #{operation.opName}."
         ].join ' '
       Winston.info message
