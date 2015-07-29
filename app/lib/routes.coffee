@@ -42,6 +42,8 @@ Router.route '/',
 
 Router.route '/user/profile',
   name: 'userProfile'
+  waitOn: () ->
+    Meteor.subscribe 'fullUserProfile'
   layoutTemplate: 'Layout'
 
 
