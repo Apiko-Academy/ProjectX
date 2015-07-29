@@ -2,6 +2,6 @@
   name: 'Dashboard'
   adminEmails: ['maxim@jssolutionsdev.com']
   collections:
-    Activity: {}
+    Activities: {}
     Companies: {}
     Invitations: {}
