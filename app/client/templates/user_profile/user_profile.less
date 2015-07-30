@@ -1,0 +1,18 @@
+.settings-area-toggle-btn {
+  &[aria-expanded="false"] {
+    .fa-eye {
+      display: none;
+    }
+    .fa-eye-slash {
+      display: inline-block;
+    }
+  }
+  &[aria-expanded="true"] {
+    .fa-eye {
+      display: inline-block;
+    }
+    .fa-eye-slash {
+      display: none;
+    }
+  }
+}

@@ -22,6 +22,10 @@ AccountsTemplates.configureRoute 'signUp',
     Router.go 'createCompany'
 
 
+AccountsTemplates.configureRoute 'resetPwd',
+  layoutTemplate: 'Layout'
+
+
 Router._scrollToHash = (hash) ->
   hash = 'body' unless hash.length
   $section = $ hash

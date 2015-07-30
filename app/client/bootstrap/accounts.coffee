@@ -1,3 +1,6 @@
+AccountsTemplates.configure
+  enablePasswordChange: true
+
 AccountsTemplates.removeField 'password'
 AccountsTemplates.addField
   _id: 'password'
