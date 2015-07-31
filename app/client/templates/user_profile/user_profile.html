@@ -23,7 +23,11 @@
         <p>
           <b>Role:</b>
           &nbsp;
-          {{userRole}}
+          {{# if isInRole 'admin'}}
+            admin
+          {{else}}
+            user
+          {{/ if}}
         </p>
       </div>
     </div>
