@@ -1,3 +1,13 @@
+Template.UserProfile.events
+  'click [data-action="remove-user"]': (e) ->
+    e.preventDefault()
+    Meteor.users.remove _id: Meteor.userId(), (err) ->
+      if (err)
+        sAlert.error err
+        Winston.error err
+      else
+        Router.go 'home'
+
 Template.UserProfile.helpers
   userEmail: () ->
     if Meteor.user()

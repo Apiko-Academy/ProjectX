@@ -1,5 +1,5 @@
 Template.CompanyInfo.events
-  'click [data-action="remove"]': (e) ->
+  'click [data-action="remove-company"]': (e) ->
     e.preventDefault()
     Companies.remove _id: @_id, (err) ->
       if (err)
