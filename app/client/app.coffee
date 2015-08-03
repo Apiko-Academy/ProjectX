@@ -1,5 +1,3 @@
-Template.registerHelper 'schemas', schemas
-
 Template.registerHelper 'collections', () ->
   collectionsList = Mongo.Collection.getAll()
   collections = {}
