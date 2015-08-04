@@ -6,6 +6,7 @@ schema = new SimpleSchema
     max: 32
   services:
     type: Object
+    optional: true
     blackbox: true
   emails:
     type: [Object]
@@ -15,6 +16,8 @@ schema = new SimpleSchema
     type: String
   'emails.$.verified':
     type: Boolean
+    optional: true
+    defaultValue: false
   profile:
     type: schemas.UserProfile
     label: 'Profile'
