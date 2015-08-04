@@ -1,7 +1,7 @@
 Package.describe({
   name: 'jss:popup',
   version: '0.0.1',
-  summary: '',
+  summary: 'Popup window.',
   git: 'https://github.com/JSSolutions/meteor-popup/',
   documentation: 'README.md'
 });
