@@ -8,6 +8,11 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.use(['templating', 'jquery']);
+  api.use([
+    'templating',
+    'jquery',
+    'underscore',
+    'fortawesome:fontawesome'
+  ]);
   api.addFiles(['popup.html', 'popup.css', 'popup.js'], 'client');
 });

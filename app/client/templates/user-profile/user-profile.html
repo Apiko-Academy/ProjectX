@@ -14,7 +14,7 @@
       <div class="col-md-9 col-lg-9">
         <p class="lead">
           {{currentUser.profile.fullname}}
-          {{# PopupToggle id='userFullname'}}
+          {{# PopupToggle id='userFullname' autoPosition='vertical'}}
             <a href="#">
               <i class="fa fa-pencil"></i>
             </a>
@@ -23,9 +23,14 @@
             {{# autoForm id='updateUserFullname'
                          type='update'
                          collection=collections.users
-                         doc=currentUser}}
+                         doc=currentUser
+                         template='bootstrap3-inline'
+                         class='form-inline'
+                         afFieldInput-placeholder='schemaLabel'}}
               {{> afQuickField name='profile.fullname'}}
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-success">
+                <i class="fa fa-check"></i>
+              </button>
             {{/ autoForm}}
           {{/ PopupWindow}}
         </p>
@@ -33,8 +38,12 @@
           <b>Email:</b>
           &nbsp;
           <a href="mailto:{{userEmail}}">
-            {{userEmail}}
+              {{userEmail}}
           </a>
+          {{> FieldUpdatePopup id='updateUserEmail'
+                               collection=collections.users
+                               doc=currentUser
+                               fieldName='emails.0.address'}}
         </p>
         <p>
           <b>Role:</b>
