@@ -24,6 +24,11 @@ schema = new SimpleSchema
   createdAt:
     type: Date
     label: 'Created at'
+    denyUpdate: true
+    autoform:
+      type: 'hidden'
+    autoValue: () ->
+      new Date() if @isInsert
   roles:
     type: [String]
     label: 'Roles'

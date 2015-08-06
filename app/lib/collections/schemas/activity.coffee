@@ -13,9 +13,13 @@ schema = new SimpleSchema
   startDate:
     type: Date
     label: 'Start date'
+    autoform:
+      type: 'moment-datepicker'
   endDate:
     type: Date
     label: 'End date'
+    autoform:
+      type: 'moment-datepicker'
   dailyEstimate:
     type: Number
     label: 'Daily estimate'
