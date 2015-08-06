@@ -12,6 +12,6 @@ schema = new SimpleSchema
     type: Date
     label: 'Expiration date'
     autoform:
-      type: 'moment-datepicker'
+      type: 'bootstrap-datepicker'
 
 Namespace 'schemas', Invitation: schema

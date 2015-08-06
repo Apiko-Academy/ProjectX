@@ -1,8 +1,0 @@
-{
-  "name": "moment-datepicker",
-  "description": "Moment Datepicker packaged for Meteor. See https://github.com/MakingSense/moment-datepicker",
-  "homepage": "",
-  "author": "Gildas Garcia <gildas.garcia@gmail.com>",
-  "version": "0.0.2",
-  "git": "https://github.com/djhi/meteor-moment-datepicker.git",
-}

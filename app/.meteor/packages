@@ -36,6 +36,7 @@ utilities:avatar
 reywood:publish-composite
 dburles:mongo-collection-instances
 jss:popup
-gildaspk:autoform-moment-datepicker
 momentjs:moment
 jss:bootstrap-vertical-tabs
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker

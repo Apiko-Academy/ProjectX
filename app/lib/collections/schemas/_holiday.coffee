@@ -8,11 +8,11 @@ schema = new SimpleSchema
     type: Date
     label: 'Start date'
     autoform:
-      type: 'moment-datepicker'
+      type: 'bootstrap-datepicker'
   endDate:
     type: Date
     label: 'End date'
     autoform:
-      type: 'moment-datepicker'
+      type: 'bootstrap-datepicker'
 
 Namespace 'schemas', Holiday: schema

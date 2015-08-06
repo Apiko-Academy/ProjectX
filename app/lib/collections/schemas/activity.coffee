@@ -14,12 +14,12 @@ schema = new SimpleSchema
     type: Date
     label: 'Start date'
     autoform:
-      type: 'moment-datepicker'
+      type: 'bootstrap-datepicker'
   endDate:
     type: Date
     label: 'End date'
     autoform:
-      type: 'moment-datepicker'
+      type: 'bootstrap-datepicker'
   dailyEstimate:
     type: Number
     label: 'Daily estimate'
