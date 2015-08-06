@@ -4,12 +4,13 @@ Template.PopupWindow.events({
   }
 });
 
-
-Template.PopupWindow.onCreated(function () {
-  this.data = _.extend({
-    displayCloseBtn: true,
-    closeBtnPosition: 'right'
-  }, this.data);
+Template.PopupWindow.helpers({
+  defaultParams: function () {
+    return _.extend({
+      displayCloseBtn: true,
+      closeBtnPosition: 'right'
+    }, Template.currentData());
+  }
 });
 
 
