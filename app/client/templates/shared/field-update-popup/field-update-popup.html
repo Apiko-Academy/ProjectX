@@ -1,6 +1,6 @@
 <template name='FieldUpdatePopup'>
   {{# PopupToggle id=id autoPosition='vertical'}}
-    <a href="#">
+    <a href="#" class="field-update-popup-toggle">
       <i class="fa fa-pencil"></i>
     </a>
   {{/ PopupToggle}}
@@ -11,7 +11,8 @@
                  doc=doc
                  template='bootstrap3-inline'
                  class='form-inline'
-                 afFieldInput-placeholder='schemaLabel'}}
+                 afFieldInput-placeholder='schemaLabel'
+                 setArrayItems=setArrayItems}}
       {{> afQuickField name=fieldName}}
       <button type="submit" class="btn btn-success">
         <i class="fa fa-check"></i>
