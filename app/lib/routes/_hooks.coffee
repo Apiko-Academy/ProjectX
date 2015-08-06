@@ -6,7 +6,8 @@ Router.onBeforeAction () ->
 ,
   only: [
     'createCompany',
-    'userProfile'
+    'userProfile',
+    'companyProfile'
   ]
 
 
@@ -15,5 +16,6 @@ Router.onAfterAction () ->
 ,
   only: [
     'createCompany',
-    'userProfile'
+    'userProfile',
+    'companyProfile'
   ]
