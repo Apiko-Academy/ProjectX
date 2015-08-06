@@ -52,7 +52,7 @@
         </h3>
         <div class="lead">
           {{# each currentUser.profile.companies}}
-            {{> CompanyInfo}}
+            {{> UserProfileCompanyInfo}}
           {{/ each}}
         </div>
       </div>
@@ -62,7 +62,11 @@
         <h3>
           Settings
           &nbsp;
-          <a class="settings-area-toggle-btn" data-toggle="collapse" href="#settings-area" aria-expanded="false" aria-controls="settings-area">
+          <a class="settings-area-toggle-btn"
+             data-toggle="collapse"
+             href="#settings-area"
+             aria-expanded="false"
+             aria-controls="settings-area">
             <i class="fa fa-eye"></i>
             <i class="fa fa-eye-slash"></i>
           </a>
