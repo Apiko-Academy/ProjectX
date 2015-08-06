@@ -8,3 +8,6 @@ Meteor.publishComposite 'fullUserProfile',
       Companies.find _id:
         $in: companies
   ]
+
+Meteor.publish 'company', (companyId) ->
+  Companies.find _id: companyId, owner: @userId
