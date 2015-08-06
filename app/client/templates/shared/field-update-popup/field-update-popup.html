@@ -4,7 +4,7 @@
       <i class="fa fa-pencil"></i>
     </a>
   {{/ PopupToggle}}
-  {{# PopupWindow id=id}}
+  {{# PopupWindow id=id closeBtnPosition='left'}}
     {{# autoForm id=id
                  type='update'
                  collection=collection
@@ -13,7 +13,7 @@
                  class='form-inline'
                  afFieldInput-placeholder='schemaLabel'
                  setArrayItems=setArrayItems}}
-      {{> afQuickField name=fieldName}}
+      {{> afQuickField name=fieldName label=false}}
       <button type="submit" class="btn btn-success">
         <i class="fa fa-check"></i>
       </button>
