@@ -1,4 +1,4 @@
-schema = SimpleSchema
+schema = new SimpleSchema
   name:
     type: String
     label: 'Name'
