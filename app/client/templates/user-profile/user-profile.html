@@ -14,25 +14,10 @@
       <div class="col-md-9 col-lg-9">
         <p class="lead">
           {{currentUser.profile.fullname}}
-          {{# PopupToggle id='userFullname' autoPosition='vertical'}}
-            <a href="#">
-              <i class="fa fa-pencil"></i>
-            </a>
-          {{/ PopupToggle}}
-          {{# PopupWindow id='userFullname'}}
-            {{# autoForm id='updateUserFullname'
-                         type='update'
-                         collection=collections.users
-                         doc=currentUser
-                         template='bootstrap3-inline'
-                         class='form-inline'
-                         afFieldInput-placeholder='schemaLabel'}}
-              {{> afQuickField name='profile.fullname'}}
-              <button type="submit" class="btn btn-success">
-                <i class="fa fa-check"></i>
-              </button>
-            {{/ autoForm}}
-          {{/ PopupWindow}}
+          {{> FieldUpdatePopup id='updateUserFullname'
+                               collection=collections.users
+                               doc=currentUser
+                               fieldName='profile.fullname'}}
         </p>
         <p>
           <b>Email:</b>
