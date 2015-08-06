@@ -16,7 +16,7 @@
   border-left: 1px solid #ddd;
 }
 .tabs-left>li, .tabs-right>li {
-  float: none;
+  float: none !important;
   margin-bottom: 2px;
 }
 .tabs-left>li {
