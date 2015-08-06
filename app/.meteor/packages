@@ -40,3 +40,5 @@ momentjs:moment
 jss:bootstrap-vertical-tabs
 rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
+bootswatch:paper
+aldeed:template-extension

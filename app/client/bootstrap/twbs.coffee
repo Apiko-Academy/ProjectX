@@ -1,3 +1,3 @@
 Template.onRendered () ->
-  @$('.dropdown-toggle').dropdown()
-  @$('[data-toggle="tooltip"]').tooltip()
+  $('.dropdown-toggle').dropdown()
+  $('[data-toggle="tooltip"]').tooltip()
