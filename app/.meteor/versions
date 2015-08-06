@@ -45,6 +45,8 @@ email@1.0.6
 fastclick@1.0.3
 fortawesome:fontawesome@4.3.0
 geojson-utils@1.0.3
+gildaspk:autoform-moment-datepicker@0.0.2
+gildaspk:moment-datepicker@0.0.3
 gwendall:session-json@0.1.7
 html-tools@1.0.4
 htmljs@1.0.4

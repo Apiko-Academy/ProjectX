@@ -36,3 +36,5 @@ utilities:avatar
 reywood:publish-composite
 dburles:mongo-collection-instances
 jss:popup
+gildaspk:autoform-moment-datepicker
+momentjs:moment
