@@ -9,8 +9,6 @@
          data-placement="top"
          title="Owner"></i>
     {{/ if}}
-    <a href="#" class="text-danger" data-action="remove-company">
-      <i class="fa fa-trash"></i>
-    </a>
+    {{> DocRemoveBtn collection=collections.companies _id=_id}}
   </div>
 </template>
