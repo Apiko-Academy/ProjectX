@@ -1,0 +1,11 @@
+<template name="CompanyProfileProjectsTabItem">
+  {{project.name}}
+  {{> FieldUpdatePopup id=formId
+                       collection=collections.companies
+                       doc=../company
+                       fieldName=fieldName
+                       setArrayItems=true}}
+  <a href="#" class="text-danger" data-action="remove-project">
+    <i class="fa fa-trash"></i>
+  </a>
+</template>
