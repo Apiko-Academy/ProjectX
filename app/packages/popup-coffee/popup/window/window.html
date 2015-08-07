@@ -1,0 +1,12 @@
+<template name="PopupWindow">
+  <div data-popup-window="{{id}}" class="popup-window">
+    {{# if displayCloseBtn}}
+      <span class="popup-window-close-btn {{closeBtnPosition}}">
+        <i class="fa fa-times"></i>
+      </span>
+    {{/ if}}
+    <div>
+      {{> Template.contentBlock}}
+    </div>
+  </div>
+</template>

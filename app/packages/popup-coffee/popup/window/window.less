@@ -1,0 +1,43 @@
+.popup-window {
+  display: none;
+  border: 1px solid RGBA(0, 0, 0, 0.35);
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 99;
+  background-color: #FFFFFF;
+  min-height: 1em;
+  min-width: 10em;
+
+  > div {
+    position: relative;
+    padding: 1.5em;
+  }
+
+  > .popup-window-close-btn {
+    position: absolute;
+    z-index: 100;
+    top: 0.5em;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+
+    &:hover {
+      filter: alpha(opacity=50);
+      opacity: .5;
+    }
+
+    &.left {
+      left: 0.5em;
+    }
+
+    &.right {
+      right: 0.5em;
+    }
+  }
+}
