@@ -1,4 +1,22 @@
 <template name="CompanyProfileCustomersTab">
+  <p class="lead">
+    Customers&nbsp;
+    {{# PopupToggle id='insertCutomer' autoPosition='vertical'}}
+      <a href="#">
+        <i class="fa fa-plus"></i>
+      </a>
+    {{/ PopupToggle}}
+    {{# PopupWindow id='insertCutomer' closeBtnPosition='left'}}
+      {{> quickForm id='insertCutomer'
+                    type='update-pushArray'
+                    collection=collections.companies
+                    doc=company
+                    scope='customers'
+                    template='bootstrap3-inline'
+                    class='form-inline'
+                    label=false}}
+    {{/ PopupWindow}}
+  </p>
   <table class="table table-striped table-hover">
     <thead>
     <tr>
