@@ -1,18 +1,18 @@
-<template name="CompanyProfileCustomersTab">
+<template name="CompanyProfileProjectsTab">
   <p class="lead">
-    Customers
+    Projects
     &nbsp;
-    {{# PopupToggle id='insertCutomer' autoPosition='vertical'}}
+    {{# PopupToggle id='insertProject' autoPosition='vertical'}}
       <a href="#">
         <i class="fa fa-plus"></i>
       </a>
     {{/ PopupToggle}}
-    {{# PopupWindow id='insertCutomer' closeBtnPosition='left'}}
-      {{> quickForm id='insertCutomer'
+    {{# PopupWindow id='insertProject' closeBtnPosition='left'}}
+      {{> quickForm id='insertProject'
                     type='update-pushArray'
                     collection=collections.companies
                     doc=company
-                    scope='customers'
+                    scope='projects'
                     template='bootstrap3-inline'
                     class='form-inline'}}
     {{/ PopupWindow}}
@@ -25,11 +25,11 @@
     </tr>
     </thead>
     <tbody>
-      {{# each customersInfo}}
+      {{# each projectsInfo}}
         <tr>
           <td>{{index}}</td>
           <td>
-            {{> CompanyProfileCustomersTabItem}}
+            {{> CompanyProfileProjectsTabItem}}
           </td>
         </tr>
       {{/ each}}
