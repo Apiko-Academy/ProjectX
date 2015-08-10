@@ -1,6 +1,6 @@
 schema = new SimpleSchema
   name:
-    type:String
+    type: String
     label: 'Name'
     min: 2
     max: 32

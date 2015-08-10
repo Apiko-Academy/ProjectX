@@ -13,6 +13,8 @@ schema = new SimpleSchema
     type: [String]
     label: 'Companies'
     defaultValue: []
+    minCount: 0
+    maxCount: 2**16
   'companies.$':
     regEx: SimpleSchema.RegEx.Id
 
