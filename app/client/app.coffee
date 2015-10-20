@@ -4,3 +4,5 @@ Template.registerHelper 'collections', () ->
   _.each collectionsList, (item) ->
     collections[item.name] = item.instance
   collections
+
+Template.registerHelper "Schemas", schemas

@@ -1,0 +1,56 @@
+<template name="CompanyProfileUsersTab">
+    <p class="lead">
+        Users
+        <a href="" class="invite-user">Invite user</a>
+    </p>
+</template>
+
+<template name="InviteUsers">
+    <div class="modal fade autoform-modal" id="newMemberModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Add Team Members</h4>
+                </div>
+                <div class="modal-body">
+                    {{> inviteByMail company=company}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="inviteByMail">
+    {{#autoForm schema=Schemas.Invitation id="inviteByMail" type="method" meteormethod="sendCompanyEmail"}}
+        <fieldset>
+            {{> afFieldInput name='companyName' type='hidden' value=company.name}}
+            {{> afFieldInput name='companyId' type='hidden' value=company.companyId}}
+            {{> afQuickField name="emails"}}
+            {{> collapseMessage}}
+
+            <div>
+                <button type="reset" class="btn btn-default pull-left">Reset</button>
+                <button type="submit" class="btn btn-primary pull-right">Send</button>
+            </div>
+        </fieldset>
+    {{/autoForm}}
+</template>
+
+<template name="collapseMessage">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title" id="-collapsible-group-item-#1-">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                    Message (Optional)
+                </a>
+                <a class="anchorjs-link" href="#-collapsible-group-item-#1-"><span class="anchorjs-icon"></span></a></h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+            <div class="panel-body">
+                {{> afQuickField name="message" rows=5}}
+            </div>
+        </div>
+    </div>
+</template>
