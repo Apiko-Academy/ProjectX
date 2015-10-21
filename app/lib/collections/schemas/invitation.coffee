@@ -1,12 +1,8 @@
 schema = new SimpleSchema
   companyId:
     type: String
-    autoValue: ->
-      'id1'
   companyName:
     type: String
-    autoValue: ->
-      'name'
   message:
     type: String
     label: 'Message'
