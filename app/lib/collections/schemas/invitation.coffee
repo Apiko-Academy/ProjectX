@@ -1,8 +1,6 @@
 schema = new SimpleSchema
   companyId:
     type: String
-  companyName:
-    type: String
   message:
     type: String
     label: 'Message'

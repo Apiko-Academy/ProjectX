@@ -1,4 +1,7 @@
 AccountsTemplates.configureRoute 'signIn',
+  path: '/sign-in/:email?'
+  data: () ->
+    email: @params.email
   layoutTemplate: 'Layout'
   redirect: () ->
     user = Meteor.user()
@@ -11,6 +14,9 @@ AccountsTemplates.configureRoute 'signIn',
 
 
 AccountsTemplates.configureRoute 'signUp',
+  path: '/sign-up/:email?'
+  data: () ->
+    email: @params.email
   layoutTemplate: 'Layout'
   redirect: () ->
     Router.go 'createCompany'

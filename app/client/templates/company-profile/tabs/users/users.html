@@ -25,7 +25,6 @@
 <template name="inviteByMail">
     {{#autoForm schema=Schemas.Invitation id="inviteByMail" type="method" meteormethod="sendCompanyEmail"}}
         <fieldset>
-            {{> afFieldInput name='companyName' type='hidden' value=company.name}}
             {{> afFieldInput name='companyId' type='hidden' value=company.companyId}}
             {{> afQuickField name="emails"}}
             {{> collapseMessage}}

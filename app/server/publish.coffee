@@ -11,3 +11,13 @@ Meteor.publishComposite 'fullUserProfile',
 
 Meteor.publish 'company', (companyId) ->
   Companies.find _id: companyId, owner: @userId
+
+Meteor.publish 'invitation', (invitationId) ->
+  Invitations.find _id: invitationId
+
+Meteor.publish 'usersEmails', (invitationId) ->
+  if not Invitations.findOne(invitationId)
+    @stop()
+  else
+    email = Invitations.findOne(invitationId).emails[0]
+    Meteor.users.find {emails: {$elemMatch: {address: email}}}, fields: {emails: 1}
