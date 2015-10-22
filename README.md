@@ -5,7 +5,7 @@ Team and project planning tool.
 ## How to start?
 1. Install Meteor Framework
 2. Open terminal in `/app` directory
-3. Type `meteor` command in console to start application
+3. Type `meteor --settings ../config/settings.json` command in console to start application
 4. Sign-in as administration (login: admin; password: admin)
 5. Fill the website via the admin panel
 
