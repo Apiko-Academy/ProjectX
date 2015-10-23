@@ -20,5 +20,10 @@ schema = new SimpleSchema
       new Date()
     autoform:
       type: 'bootstrap-datepicker'
+  isActive:
+    type: Boolean
+    optional: true
+    autoform:
+      type: 'hidden'
 
 Namespace 'schemas', Invitation: schema

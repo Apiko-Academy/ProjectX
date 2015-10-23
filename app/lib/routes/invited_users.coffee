@@ -5,15 +5,20 @@ Router.route "/invite/:invitationId",
     Meteor.subscribe 'invitation', @params.invitationId
     Meteor.subscribe 'usersEmails', @params.invitationId
   action: () ->
-    if Invitations.findOne()
-      user = Meteor.userId()
-      userEmail = Invitations.findOne().emails[0]
-      checkUserByEmail = Meteor.users.findOne {emails: {$elemMatch: {address: userEmail}}}
-      if user
-        Router.go 'userProfile'
-      if not user and checkUserByEmail
-        console.log 'need to login!'
-        Router.go 'atSignIn', {email: userEmail}
-      else if not user and not checkUserByEmail
-        console.log 'need to register!'
-        Router.go 'atSignUp', {email: userEmail}
+    invitation = Invitations.findOne()
+    if invitation
+      Meteor.call 'invitationStatus', invitation._id, (err) ->
+        if err
+          # do something
+        else
+          user = Meteor.userId()
+          if user
+            Router.go 'userProfile'
+          userEmail = invitation.emails[0]
+          checkUserByEmail = Meteor.users.findOne {emails: {$elemMatch: {address: userEmail}}}
+          if checkUserByEmail
+            console.log 'need to login!'
+            Router.go 'atSignIn', {email: userEmail}
+          else
+            console.log 'need to register!'
+            Router.go 'atSignUp', {email: userEmail}

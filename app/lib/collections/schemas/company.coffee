@@ -37,6 +37,14 @@ schema = new SimpleSchema
     defaultValue: []
     minCount: 0
     maxCount: 2**16
+  userRole:
+    type: [Object]
+    label: 'Role'
+    autoform:
+      type: 'hidden'
+    defaultValue: []
+    optional: true
+    blackbox: true
 
 
 Namespace 'schemas', Company:schema

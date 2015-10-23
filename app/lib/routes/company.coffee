@@ -9,5 +9,4 @@ Router.route '/company/:_id/profile',
   waitOn: () ->
     @subscribe 'company', @params._id
   data: () ->
-    console.log 'Companies => ', Companies.findOne()
     company: Companies.findOne()

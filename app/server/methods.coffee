@@ -18,3 +18,8 @@ Meteor.methods
         from: 'stepan_ua@i.ua'
         subject: 'Invitation to ' + doc.companyId
         text: "#{Meteor.absoluteUrl()}invite/#{invitationId}"
+
+  invitationStatus: (id) ->
+    check id, String
+    Invitations.update id,
+      $set: isActive: true
