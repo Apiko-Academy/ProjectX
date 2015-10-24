@@ -1,12 +1,12 @@
 Router.route '/companies/create',
   name: 'createCompany'
-  layoutTemplate: 'Layout'
+  controller: controllers.DefaultMenu
 
 
 Router.route '/company/:_id/profile',
   name: 'companyProfile'
-  layoutTemplate: 'Layout'
   waitOn: () ->
     @subscribe 'company', @params._id
   data: () ->
-    company: Companies.findOne()
+    company: Companies.findOne _id: @params._id
+  controller: controllers.DefaultMenu
