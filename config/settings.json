@@ -1,7 +1,16 @@
 {
   "public": {
   },
-
+  "users": {
+    "admin": {
+      "username": "admin",
+      "password": "admin",
+      "email": "admin@projectx.com",
+      "profile": {
+        "fullname": "JSSolutions"
+      }
+    }
+  },
   "winston": {
     "loggy": {
       "subdomain": "academy",
