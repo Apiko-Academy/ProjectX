@@ -12,7 +12,9 @@ Meteor.startup ->
 
   Accounts.onLogin (doc) ->
     email = doc.user.emails[0].address
-    invite = Invitations.findOne({emails: email, isActive: true})
+    invite = Invitations.findOne
+      emails: email
+      isActive: true
     if invite
       Meteor.users.update doc.user._id,
         $addToSet: 'profile.companies': invite.companyId
