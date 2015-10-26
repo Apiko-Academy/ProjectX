@@ -23,6 +23,7 @@ schema = new SimpleSchema
   isActive:
     type: Boolean
     optional: true
+    defaultValue: false
     autoform:
       type: 'hidden'
 

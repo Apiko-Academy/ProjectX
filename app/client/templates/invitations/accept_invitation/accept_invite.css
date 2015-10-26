@@ -1,0 +1,16 @@
+.jumbotron {
+  background-color: darkgray;
+  margin-top: 14em;
+}
+
+.jumbotron.btn {
+  margin-right: 100px;
+}
+
+.jumbotron div.invite-buttons {
+  padding-top: 35px;
+}
+
+div.invite-buttons button.btn-success {
+  margin-right: 5%;
+}

@@ -1,5 +1,10 @@
+#submitFunc = (err, state) ->
+#  console.log Template.currentData()
+
+
 AccountsTemplates.configure
   enablePasswordChange: true
+#  onSubmitHook: submitFunc
 
 
 AccountsTemplates.removeField 'password'

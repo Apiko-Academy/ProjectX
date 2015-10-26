@@ -34,3 +34,13 @@ Meteor.methods
     Invitations.update id,
       $set: isActive: true
     # TODO #6: Don't forget to deactivate all other invitations of this user.
+
+  declineInvitation: (invitationData) ->
+    console.log invitationData
+    check invitationData.invitationId, String
+    check invitationData.userEmail, String
+    email = Meteor.users.findOne
+      emails:
+        $elemMatch: address: invitationData.userEmail
+    if email
+      Invitations.remove invitationData.invitationId
