@@ -17,7 +17,7 @@ After that you will be able mark your card as "Done".
 Testing server: [project-x.meteor.com](http://project-x.meteor.com/)  
 Production server: *not yet exists*
 
-You can simply type `meteor deploy project-x` to initiate deployment process.
+You can simply type `meteor deploy project-x --settings ../config/settings.json` to initiate deployment process.
 
 ## License
 Note that this project is distributed under the [MIT License](LICENSE).  

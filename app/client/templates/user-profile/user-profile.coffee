@@ -14,6 +14,8 @@ Template.UserProfile.helpers
       Meteor.user().emails[0].address
   userInitials: () ->
     fullname = ''
-    for word in Meteor.user().profile.fullname.split(' ')
-      fullname += word[0].toUpperCase()
+    user = Meteor.user()
+    if user
+      for word in user.profile.fullname.split(' ')
+        fullname += word[0].toUpperCase()
     fullname

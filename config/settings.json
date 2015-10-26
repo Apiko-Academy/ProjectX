@@ -1,5 +1,27 @@
 {
   "public": {
   },
-  "mail_url": "smtp://postmaster@sandbox579cbd077a884a74a6279666ef38982d.mailgun.org:d2a347a64fedcf29a274af2eb5d2278c@smtp.mailgun.org:587"
+  "mail_url": "smtp://postmaster@sandbox579cbd077a884a74a6279666ef38982d.mailgun.org:d2a347a64fedcf29a274af2eb5d2278c@smtp.mailgun.org:587",
+  "users": {
+    "admin": {
+      "username": "admin",
+      "password": "admin",
+      "email": "admin@projectx.com",
+      "profile": {
+        "fullname": "JSSolutions"
+      }
+    }
+  },
+  "winston": {
+    "loggy": {
+      "subdomain": "academy",
+      "auth": {
+        "username": "JSSolutions",
+        "password": "projectx"
+      },
+      "inputToken": "d88ea45c-3798-4816-800c-f1cb81644df9",
+      "json": true,
+      "handleExceptions": true
+    }
+  }
 }

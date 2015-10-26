@@ -6,7 +6,7 @@ Invitations.allow
   remove: -> true
 
 denyChecker = (userId) ->
-  deny = not Meteor.userId()
+  deny = not userId
   if deny
     Winston.warn '''
       Non-authorized user tries get access to the `Invitations` collection'
