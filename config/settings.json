@@ -1,6 +1,5 @@
 {
   "public": {
   },
-
-  "sample": "value"
+  "mail_url": "smtp://postmaster@sandbox579cbd077a884a74a6279666ef38982d.mailgun.org:d2a347a64fedcf29a274af2eb5d2278c@smtp.mailgun.org:587"
 }
