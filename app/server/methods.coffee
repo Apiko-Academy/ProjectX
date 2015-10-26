@@ -10,19 +10,23 @@ Meteor.methods
     check doc, schemas.Invitation
     @unblock()
     doc.emails.forEach (item) =>
-      # TODO #4: It would be good make it in a bit more asynchronous way ;)
-      # TODO #4: We could add callback into the insert function.
-      # TODO #4: In this callback we should send email if there wasn't errors.
-      invitationId = Invitations.insert
-        companyId: doc.companyId
-        message: doc.message or ""
-        emails: [item]
-      Email.send
-        to: item
-        # TODO #3: Make this option configurable as well.
-        from: 'stepan_ua@i.ua'
-        subject: 'Invitation to ' + doc.companyId
-        text: "#{Meteor.absoluteUrl()}invite/#{invitationId}"
+      Invitations.insert {
+          companyId: doc.companyId
+          message: doc.message or ""
+          emails: [item]
+        }, (err, res) ->
+              if err
+                console.log err
+              else
+                Email.send
+                  to: item
+                # TODO #3: Make this option configurable as well.
+                  from: 'invitations@project-x.com'
+                  subject: 'Invitation to ' + doc.companyId
+                  text: """You were invited to company (there is will be company name in future)\n
+                        Please follow this link #{Meteor.absoluteUrl()}invite/#{res} to accept invitation.\n
+                        If you don't want to accept this invitation, just ignore it!.\n
+                        Please, do not reply on this message!"""
 
   invitationStatus: (id) ->
     check id, String
