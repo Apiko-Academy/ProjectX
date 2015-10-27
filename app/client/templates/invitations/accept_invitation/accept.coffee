@@ -1,8 +1,9 @@
 Template.AcceptInvite.events
   'click .accept-invite': (e, t) ->
-    console.log Template.currentData()
+    Meteor.call 'acceptInvitation', Template.currentData(), (err, res) ->
+      if res
+        Router.go 'userProfile'
   'click .decline-invite': (e, t) ->
-    console.log Template.currentData()
     Meteor.call 'declineInvitation', Template.currentData(), (err, res) ->
       if res
         Router.go 'userProfile'

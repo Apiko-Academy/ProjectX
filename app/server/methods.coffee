@@ -35,6 +35,23 @@ Meteor.methods
       $set: isActive: true
     # TODO #6: Don't forget to deactivate all other invitations of this user.
 
+  acceptInvitation: (invitationData) ->
+    check invitationData.invitationId, String
+    check invitationData.userEmail, String
+    invite = Invitations.findOne
+      emails: invitationData.userEmail
+      isActive: true
+    if invite
+      user = Meteor.users.findOne
+        emails:
+          $elemMatch: address: invitationData.userEmail
+      Meteor.users.update user._id,
+        {$addToSet: 'profile.companies': invite.companyId},
+        (err, res) ->
+          console.log err if err
+          if res
+            Invitations.remove invitationData.invitationId
+
   declineInvitation: (invitationData) ->
     console.log invitationData
     check invitationData.invitationId, String
